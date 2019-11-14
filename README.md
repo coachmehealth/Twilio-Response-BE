@@ -64,6 +64,8 @@ _Example_: response (monthly)
 ```
 
 -   A message is scheduled to be sent monthly if the month field has a valid month abbreviation and a valid dom (day of the month) integer. While messages are scheduled to be sent weekly if the month field is left empty and the weekday field has a valid day string (example Monday, Tuesday, etc.). It's important to note that both weekly and monthly formats require min (minutes), hour, and ampm (before/after noon) have to be filled in with valid information for the scheduler to work as intended.
+-   Message dispatch logic for weekly includes an if statement with an equality operator that checks whether the time information in the weekday, hour, min, and ampm fields are equal to the current pacific time as defined by the moment() function. moment() has been set to display time as `Tuesday,6:06pm`.
+-   Message dispatch logic for monthly includes an if statement with an equality operator that checks whether the time information in the month, dom, year, hour, min, and ampm fields are equal to the current pacific time as defined by the moment() function. moment() has been set to display time as `11 13, 2019 4:05 PM`.
 -   Intended inputs for min, hour, and ampm fields are `00 - 60`, `1 - 12`, and `am - pm` respectively.
 
 _Bugs_
