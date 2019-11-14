@@ -9,10 +9,16 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
     "server": "nodemon index.js"
-},
+  },
   "dependencies": {
+    "axios": "^0.19.0",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "helmet": "^3.21.2",
+    "moment-timezone": "^0.5.27",
+    "node-cron": "^2.0.3",
     "twilio": "^3.37.0",
     "twilio-chat": "^3.3.2"
   },
@@ -21,5 +27,5 @@
     "jest": "^24.9.0",
     "nodemon": "^1.19.3",
     "supertest": "^4.0.2"
-}
+  }
 }
