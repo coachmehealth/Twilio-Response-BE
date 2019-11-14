@@ -12,7 +12,10 @@ const authToken = process.env.AUTH_TOKEN;
 const client = require('twilio')(accountSid, authToken);
 
 const requestOptions = {
-    headers: { accept: 'application/json' }
+    headers: {
+        accept: 'application/json',
+        Authorization: process.env.SERVER_SECRET
+    }
 };
 
 cron.schedule(`*/1 * * * *`, function() {
