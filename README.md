@@ -36,7 +36,7 @@ _Example_: response (weekly)
 ```javascript
 {
     "patientId": "recmLlbDsUaCMUFhf",
-    "msg": "hello mason good morning!",
+    "msg": "hello good morning!",
     "min": "09",
     "hour": "2",
     "ampm": "pm",
@@ -52,7 +52,7 @@ _Example_: response (monthly)
 ```javascript
 {
     "patientId": "recmLlbDsUaCMUFhf",
-    "msg": "hello mason good morning!",
+    "msg": "hello good morning!",
     "min": "09",
     "hour": "2",
     "ampm": "pm",
