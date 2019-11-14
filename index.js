@@ -2,15 +2,22 @@ const express = require('express');
 require('dotenv').config();
 const http = require('http');
 const MessagingResponse = require('twilio').twiml.MessagingResponse;
+const axios = require('axios');
+const cron = require('node-cron');
+const moment = require('moment-timezone');
 
 const app = express();
 const accountSid = process.env.ACCOUNT_SID;
 const authToken = process.env.AUTH_TOKEN;
 const client = require('twilio')(accountSid, authToken);
 
+const requestOptions = {
+    headers: { accept: 'application/json' }
+};
+
 cron.schedule(`*/1 * * * *`, function() {
     console.log('-----------------');
-    console.log('A minute in cron land as passed!!!!');
+    console.log('A minute in cron land has passed!!!!');
     axios
         .get(
             `${process.env.BACKEND_URL}/twilioRoute/getAllScheduledMessages`,
