@@ -3,7 +3,7 @@
 #### 1️⃣ Backend deployed at
 
 heroku.com <br>
-https://coach-me-backend.herokuapp.com/
+https://coach-me-twilio.herokuapp.com/
 
 ---
 
